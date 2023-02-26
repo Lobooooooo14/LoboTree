@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka&display=swap');
+
+:root {
+    --bg: rgb(13, 13, 13);
+    --fg: rgb(156, 163, 175);
+    --bg-f: rgb(13, 13, 13, 60%);
+    --fg-f: rgb(156, 163, 175, 60%);
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: var(--bg);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--bg-f);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: var(--fg);
+}
+
+@keyframes moveBackground {
+    from {
+        background-position: 0px 0px;
+    }
+
+    to {
+        background-position: 80px -160px;
+    }
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    border: none;
+    outline: none;
+    font-family: Arial, Helvetica, sans-serif;
+    user-select: none;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+}
+
+main {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgb(0 0 0 / 80%);
+    backdrop-filter: blur(10px);
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+body {
+    background-image: url("../img/lobo_emoji.png");
+    background-color: black;
+    background-size: 80px;
+    animation: moveBackground 5s linear infinite;
+}
