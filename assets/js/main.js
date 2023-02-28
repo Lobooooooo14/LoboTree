@@ -52,7 +52,7 @@ fetch("./assets/json/phases.json")
         const loading_phase = document.getElementById("loading-phase")
         const phase = data[Math.floor(Math.random() * data.length)]
 
-        loading_phase.innerText = phase
+        loading_phase.innerHTML = phase
     })
 
 
